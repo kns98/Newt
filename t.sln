@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewtInOne", "NewtInOne.csproj", "{251AF01A-79DB-4A80-A9B7-243E63BD21B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{251AF01A-79DB-4A80-A9B7-243E63BD21B4}.Debug|x86.ActiveCfg = Debug|x86
+		{251AF01A-79DB-4A80-A9B7-243E63BD21B4}.Debug|x86.Build.0 = Debug|x86
+		{251AF01A-79DB-4A80-A9B7-243E63BD21B4}.Release|x86.ActiveCfg = Release|x86
+		{251AF01A-79DB-4A80-A9B7-243E63BD21B4}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A3DEF28-7F87-4653-B9F6-F101D494C087}
+	EndGlobalSection
+EndGlobal
