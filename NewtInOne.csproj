@@ -242,8 +242,55 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cfg.cs" />
+    <Compile Include="CfgErrorLevel.cs" />
+    <Compile Include="CfgException.cs" />
+    <Compile Include="CfgMessage.cs" />
+    <Compile Include="CfgRule.cs" />
+    <Compile Include="CodeGeneratorRegistrationAttribute.cs" />
+    <Compile Include="CollectionUtility.cs" />
+    <Compile Include="CSharpUtility.cs" />
+    <Compile Include="EbnfBinaryExpression.cs" />
+    <Compile Include="EbnfClassifier.cs" />
+    <Compile Include="EbnfClassifierClassificationDefinition.cs" />
+    <Compile Include="EbnfClassifierFormat.cs" />
+    <Compile Include="EbnfClassifierProvider.cs" />
+    <Compile Include="EbnfConcatExpression.cs" />
+    <Compile Include="EbnfDocument.cs" />
+    <Compile Include="EbnfErrorLevel.cs" />
+    <Compile Include="EbnfException.cs" />
+    <Compile Include="EbnfExpression.cs" />
+    <Compile Include="EbnfLiteralExpression.cs" />
+    <Compile Include="EbnfMessage.cs" />
+    <Compile Include="EbnfOptionalExpression.cs" />
+    <Compile Include="EbnfOrExpression.cs" />
     <Compile Include="EbnfParser.cs" />
+    <Compile Include="EbnfProduction.cs" />
+    <Compile Include="EbnfRefExpression.cs" />
+    <Compile Include="EbnfRegexExpression.cs" />
+    <Compile Include="EbnfRepeatExpression.cs" />
+    <Compile Include="EbnfUnaryExpression.cs" />
+    <Compile Include="ExpectingException.cs" />
+    <Compile Include="ExprParser.cs" />
+    <Compile Include="FA.cs" />
+    <Compile Include="GeneralSettings.cs" />
+    <Compile Include="ISymbolResolver.cs" />
+    <Compile Include="ListDictionary.cs" />
+    <Compile Include="LLNodeType.cs" />
+    <Compile Include="LLParser.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="NewtLL1.cs" />
+    <Compile Include="NewtVS.cs" />
+    <Compile Include="OrderedCollectionEqualityComparer.cs" />
     <Compile Include="out.cs" />
+    <Compile Include="ParseContext.cs" />
+    <Compile Include="ParseNode.cs" />
+    <Compile Include="ParserUtility.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="RtfUtility.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="TableDrivenLL1Parser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include=".vs\t\v17\" />
