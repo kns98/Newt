@@ -180,11 +180,7 @@ namespace Grimoire
 	/// Represents a Context-Free Grammar, or CFG, which is a series of rules.
 	/// </summary>
 	/// <remarks>This class implements value semantics</remarks>
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	partial class Cfg : IEquatable<Cfg>, ICloneable, ISymbolResolver
 	{
 		/// <summary>
@@ -1376,11 +1372,7 @@ namespace Grimoire
 //*** SourceCombiner -> original file CfgException.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	sealed class CfgException : Exception
 	{
 		public IList<CfgMessage> Messages { get; }
@@ -1422,22 +1414,14 @@ namespace Grimoire
 //*** SourceCombiner -> original file CfgMessage.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	enum CfgErrorLevel
 	{
 		Message = 0,
 		Warning = 1,
 		Error = 2
 	}
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	sealed class CfgMessage
 	{
 		public CfgMessage(CfgErrorLevel errorLevel, int errorCode, string message)
@@ -1466,11 +1450,7 @@ namespace Grimoire
 	/// Represents a rule in a context-free grammar
 	/// </summary>
 	/// <remarks>This class has value semantics</remarks>
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	class CfgRule : IEquatable<CfgRule>, ICloneable
 	{
 		/// <summary>
@@ -3287,11 +3267,7 @@ namespace Grimoire
 //*** SourceCombiner -> original file EbnfBinaryExpression.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	abstract class EbnfBinaryExpression :EbnfExpression
 	{
 		public EbnfExpression Left { get; set; } = null;
@@ -3457,11 +3433,7 @@ namespace Grimoire
 //*** SourceCombiner -> original file EbnfConcatExpression.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	class EbnfConcatExpression : EbnfBinaryExpression,IEquatable<EbnfConcatExpression>, ICloneable
 	{
 		public EbnfConcatExpression(EbnfExpression left,params EbnfExpression[] right)
@@ -3565,11 +3537,7 @@ namespace Grimoire
 	/// Represents an EBNF grammar document
 	/// </summary>
 	/// <remarks>This class implements value semantics.</remarks>
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	class EbnfDocument : IEquatable<EbnfDocument>,ICloneable
 	{
 		/// <summary>
@@ -4191,11 +4159,7 @@ namespace Grimoire
 //*** SourceCombiner -> original file EbnfException.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	sealed class EbnfException : Exception
 	{
 		public IList<EbnfMessage> Messages { get; }
@@ -4241,11 +4205,7 @@ namespace Grimoire
 	/// Represents the base class for all EBNF expressions
 	/// </summary>
 	/// <remarks>Make sure derived classes implement <see cref="ICloneable"/> and value semantics</remarks>
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	abstract class EbnfExpression 
 	{
 		public abstract IList<IList<string>> ToDisjunctions(EbnfDocument parent,Cfg cfg);
@@ -4271,11 +4231,7 @@ namespace Grimoire
 //*** SourceCombiner -> original file EbnfLiteralExpression.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	class EbnfLiteralExpression : EbnfExpression, IEquatable<EbnfLiteralExpression>, ICloneable
 	{
 		public EbnfLiteralExpression() { }
@@ -4337,22 +4293,14 @@ namespace Grimoire
 //*** SourceCombiner -> original file EbnfMessage.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	enum EbnfErrorLevel
 	{
 		Message = 0,
 		Warning = 1,
 		Error = 2
 	}
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	sealed class EbnfMessage
 	{
 		public EbnfMessage(EbnfErrorLevel errorLevel, int errorCode, string message, int line, int column, long position)
@@ -4394,11 +4342,7 @@ namespace Grimoire
 //*** SourceCombiner -> original file EbnfOptionalExpression.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	class EbnfOptionalExpression : EbnfUnaryExpression, IEquatable<EbnfOptionalExpression>, ICloneable
 	{
 		public EbnfOptionalExpression(EbnfExpression expression) { Expression = expression; }
@@ -4455,11 +4399,7 @@ namespace Grimoire
 //*** SourceCombiner -> original file EbnfOrExpression.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	class EbnfOrExpression : EbnfBinaryExpression,IEquatable<EbnfOrExpression>, ICloneable
 	{
 		public EbnfOrExpression(EbnfExpression left, params EbnfExpression[] right)
@@ -4643,11 +4583,7 @@ namespace Grimoire
 	/// Represents a grammar production
 	/// </summary>
 	/// <remarks>This class implements value semantics</remarks>
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	class EbnfProduction : IEquatable<EbnfProduction>, ICloneable
 	{
 		public EbnfProduction(EbnfExpression expression) { Expression = expression; }
@@ -4771,11 +4707,7 @@ namespace Grimoire
 //*** SourceCombiner -> original file EbnfRefExpression.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	class EbnfRefExpression : EbnfExpression, IEquatable<EbnfRefExpression>, ICloneable
 	{
 		public EbnfRefExpression(string symbol) { Symbol = symbol; }
@@ -4834,11 +4766,7 @@ namespace Grimoire
 //*** SourceCombiner -> original file EbnfRegexExpression.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	class EbnfRegexExpression : EbnfExpression,IEquatable<EbnfRegexExpression>, ICloneable
 	{
 		public EbnfRegexExpression() { }
@@ -4899,11 +4827,7 @@ namespace Grimoire
 //*** SourceCombiner -> original file EbnfRepeatExpression.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	class EbnfRepeatExpression :EbnfUnaryExpression, IEquatable<EbnfRepeatExpression>,ICloneable
 	{
 		public EbnfRepeatExpression(EbnfExpression expression) { Expression = expression; }
@@ -4971,11 +4895,7 @@ namespace Grimoire
 //*** SourceCombiner -> original file EbnfUnaryExpression.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	abstract class EbnfUnaryExpression : EbnfExpression
 	{
 		public EbnfExpression Expression { get; set; } = null;
@@ -5163,11 +5083,7 @@ namespace Grimoire
 	/// Represents a state in a finite state machine.
 	/// </summary>	
 	/// <remarks>This class is essentially a regular expression engine and code generator.</remarks>
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	sealed partial class FA : ICloneable
 	{
 		/// <summary>
@@ -8799,11 +8715,7 @@ namespace Grimoire {
 //*** SourceCombiner -> original file ISymbolResolver.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	interface ISymbolResolver
 	{
 		string GetSymbolById(int symbolId);
@@ -9053,11 +8965,7 @@ namespace Grimoire
 //*** SourceCombiner -> original file LLParser.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	enum LLNodeType
 	{
 		Initial =0,
@@ -9067,11 +8975,7 @@ namespace Grimoire
 		Error=4,
 		EndDocument=5
 	}
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	abstract class LLParser : ISymbolResolver,IDisposable
 	{
 		public abstract LLNodeType NodeType { get; }
@@ -9761,11 +9665,7 @@ namespace Grimoire
 	/// An exception encountered during parsing where the stream contains one thing, but another is expected
 	/// </summary>
 	[Serializable]
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	sealed class ExpectingException : Exception
 	{
 		/// <summary>
@@ -9792,11 +9692,7 @@ namespace Grimoire
 	}
 	#endregion ExpectingException
 	#region ParseContext
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	abstract partial class ParseContext : IEnumerator<char>, IDisposable
 	{
 		public bool TryReadWhiteSpace()
@@ -11408,11 +11304,7 @@ namespace Grimoire
 //*** SourceCombiner -> original file ParseNode.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	partial class ParseNode
 	{
 		WeakReference<ParseNode> _parent;
@@ -12284,11 +12176,7 @@ namespace HighlighterDemo.Properties {
 //*** SourceCombiner -> original file TableDrivenLL1Parser.cs ***
 namespace Grimoire
 {
-#if GRIMOIRELIB || NEWT
-	public
-#else
-	internal
-#endif
+
 	class TableDrivenLL1Parser : LLParser
 	{
 		int _symbolId = -1;
